@@ -1,0 +1,132 @@
+/* 全局样式 */
+body {
+  font-family: "Poppins", sans-serif; /* 选用优雅的字体，可按需替换 */
+  margin: 0;
+  padding: 0;
+  background-color: #f0f9ff; /* 淡蓝色的清新背景色 */
+  color: #1e293b; /* 深灰色的文字主体颜色，便于阅读 */
+  letter-spacing: 0.5px; /* 字间距微调，增加精致感 */
+}
+
+header {
+  background-image: url(/个人博客/图片/9c7d0abdd46c9ab9c563fb9d82f497f.jpg);
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* 上下 20px 内边距，左右自适应 */
+  position: sticky; /* 导航栏固定在顶部，方便浏览 */
+  top: 0;
+  z-index: 100; /* 确保导航栏层级在其他元素之上 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 增加立体阴影效果 */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 垂直居中菜单项 */
+}
+
+nav ul li {
+  margin: 0 20px; /* 适当加大菜单项间距 */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500; /* 字体加粗，更显突出 */
+  padding: 10px 15px; /* 增加点击区域和内边距 */
+  border-radius: 5px; /* 按钮样式的圆角 */
+  transition: background-color 0.3s ease, color 0.3s ease; /* 过渡效果 */
+}
+
+nav ul li a:hover {
+  background-color: white;
+  color: #38bdf8; /* 鼠标悬停时反色效果，增加交互感 */
+}
+
+main {
+  padding: 40px 20px; /* 加大内容区域内边距 */
+  max-width: 1200px; /* 限制内容最大宽度，避免太宽 */
+  margin: 0 auto; /* 水平居中 */
+}
+
+article {
+  background-color: white;
+  border-radius: 10px; /* 更大的文章块圆角，更柔和美观 */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.08); /* 稍强的文章块阴影 */
+  margin-bottom: 40px;
+  padding: 30px;
+  transition: transform 0.3s ease; /* 鼠标悬停的缩放过渡 */
+}
+
+article:hover {
+  transform: translateY(-5px); /* 鼠标悬停时向上稍微移动一点，增加悬浮感 */
+}
+
+article h2 {
+  color: #38bdf8; /* 文章标题颜色与导航栏呼应 */
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+article p {
+  font-size: 16px;
+  line-height: 1.8; /* 更合适的行间距，便于阅读 */
+}
+
+article a {
+  color: #38bdf8;
+  text-decoration: underline; /* 链接添加下划线 */
+  transition: color 0.3s ease;
+}
+
+article a:hover {
+  color: #0e7490; /* 鼠标悬停链接颜色变化 */
+}
+
+footer {
+  background-color: #1e293b; /* 深色的页脚背景色 */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+/* 淡入淡出效果相关类 */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+.cover-image {
+  width: 100%; /* 图片宽度占满父元素宽度 */
+  max-width: 600px; /* 最大宽度限制，避免图片过大影响布局 */
+  height: auto; /* 高度自适应，保持图片比例 */
+  margin-bottom: 20px; /* 图片下方添加一点间距 */
+  border-radius: 5px; /* 图片添加圆角效果 */
+}
+.article-img {
+  width: 100%; /* 宽度占满所在文章内容块宽度 */
+  max-width: 400px; /* 最大宽度限制 */
+  height: auto; /* 自适应高度保持比例 */
+  display: block; /* 让图片成为块级元素，独占一行并可设置外边距等样式 */
+  margin: 20px auto; /* 上下添加 20px 间距，左右自动居中 */
+  border-radius: 3px; /* 适当圆角 */
+}
+.avatar-img {
+  width: 150px; /* 设置头像宽度 */
+  height: 150px; /* 设置头像高度，可根据实际头像比例调整 */
+  border-radius: 50%; /* 设置为圆形，用于头像常见的圆形效果 */
+  margin-bottom: 15px; /* 头像下方添加一点间距 */
+  display: block; /* 块级元素方便布局 */
+  margin-left: auto; /* 水平居中（与下一行配合） */
+  margin-right: auto; /* 水平居中（与下一行配合） */
+}
